@@ -5,9 +5,11 @@ async function readComponent(str_html, target){
     
     let inserted_html=""
     try{
-        await Deno.readTextFile(path).then(insert=>{
-            inserted_html=(str_html.replace(target, insert))
-        })
+        let insert=await Deno.readTextFile(path)
+        
+        const compiled_insert=await compile(insert, target_replaced)
+        inserted_html=(str_html.replace(target, compiled_insert))
+        
     }catch(e){
         inserted_html=(str_html.replace(target, "Module not found"))
     }
@@ -16,7 +18,7 @@ async function readComponent(str_html, target){
 }
 
 let binded=[]
-async function addBind(str_html, target){
+async function addBind(str_html, target, cname){
     const target_replaced=target.split("[")[0].replace(/{|\:| |}/g, "")
     const target_replaced_array=target.replace(/{|\:| |}/g, "")
     
@@ -32,7 +34,7 @@ async function addBind(str_html, target){
             set: newvalue=>{
                 BIND_${target_replaced}=newvalue
                 console.log("CHANGED", newvalue)
-                Array.from(document.getElementsByTagName("${target_replaced_array}")).forEach((tag)=>{
+                Array.from(document.getElementsByTagName("${cname}${target_replaced_array}")).forEach((tag)=>{
                     console.log(tag)
                     tag.innerHTML=BIND_${target_replaced_array}
                 })
@@ -41,13 +43,13 @@ async function addBind(str_html, target){
         BIND.${target_replaced}=BIND_${target_replaced}
     </script>`
     }
-    let replaced_html=str_html.replaceAll(target, `<${target_replaced_array}>binded</${target_replaced_array}>`)
+    let replaced_html=str_html.replaceAll(target, `<${cname}${target_replaced_array}>binded</${cname}${target_replaced_array}>`)
     
     return `${replaced_html}${appepend_script}`
 }
 
 
-export async function compile(str_html){
+export async function compile(str_html, cname){
     console.log("compiling...")
     let binded=[]
 
@@ -64,7 +66,7 @@ export async function compile(str_html){
 
                     binded.push(target_rep)
                     console.log(binded)
-                    str_html=await addBind(str_html, target)
+                    str_html=await addBind(str_html, target, cname)
                 }
             }
             else{
@@ -75,5 +77,5 @@ export async function compile(str_html){
     }
 
     console.log(str_html)
-    return str_html
+    return str_html.replaceAll("BIND",`BIND${cname}`)
 }

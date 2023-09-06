@@ -25,6 +25,6 @@ for await (const req of server){
         else html=(await Deno.readTextFile("source/503.html"))
     }
 
-    html=await compile(html)
+    html=await compile(html, "")
     req.respond({body: html});
 }
