@@ -13,7 +13,8 @@ tasks:
     init: |
       deno upgrade    
     command: |
-      deno run source/welcome.ts
+      deno run source/amaSugar_script/welcome.ts
+      deno task amaSugar
       
 vscode:
   extensions:
