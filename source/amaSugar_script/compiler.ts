@@ -24,24 +24,24 @@ async function addBind(str_html, target, cname){
     
     let appepend_script=""
     if (!(binded.includes(target_replaced))){
-        console.log(binded)
-    appepend_script=`
-    <script>
-        let BIND_${target_replaced}=BIND.${target_replaced}
+    
+        appepend_script=`
+        <script>
+            let BIND_${target_replaced}=BIND.${target_replaced}
 
-        Object.defineProperty(BIND, "${target_replaced}", {
-            get: ()=>BIND_${target_replaced},
-            set: newvalue=>{
-                BIND_${target_replaced}=newvalue
-                console.log("CHANGED", newvalue)
-                Array.from(document.getElementsByTagName("${cname}${target_replaced_array}")).forEach((tag)=>{
-                    console.log(tag)
-                    tag.innerHTML=BIND_${target_replaced_array}
-                })
-            }
-        })
-        BIND.${target_replaced}=BIND_${target_replaced}
-    </script>`
+            Object.defineProperty(BIND, "${target_replaced}", {
+                get: ()=>BIND_${target_replaced},
+                set: newvalue=>{
+                    BIND_${target_replaced}=newvalue
+                    console.log("CHANGED", newvalue)
+                    Array.from(document.getElementsByTagName("${cname}${target_replaced_array}")).forEach((tag)=>{
+                        console.log(tag)
+                        tag.innerHTML=BIND_${target_replaced_array}
+                    })
+                }
+            })
+            BIND.${target_replaced}=BIND_${target_replaced}
+        </script>`
     }
     let replaced_html=str_html.replaceAll(target, `<${cname}${target_replaced_array}>binded</${cname}${target_replaced_array}>`)
     
@@ -50,7 +50,7 @@ async function addBind(str_html, target, cname){
 
 
 export async function compile(str_html, cname){
-    console.log("compiling...")
+    console.log("compiling...", cname)
     let binded=[]
 
     if(str_html.match(/.*\{.*\}.*/)){
@@ -60,22 +60,19 @@ export async function compile(str_html, cname){
             if (target.match(/\{ *\:.*\}/)){
                 const target_rep=target.replace(/{|:| |}/g, "")
 
-                console.log(binded)
                 if (!(binded.includes(target_rep))){
-                    console.log("バインド処理", target)
+                    console.log("binding...", target)
 
                     binded.push(target_rep)
-                    console.log(binded)
                     str_html=await addBind(str_html, target, cname)
                 }
             }
             else{
-                console.log("コンポーネント処理", target)
+                console.log("inserting component...", target)
                 str_html=await readComponent(str_html, target)
             }
         }
     }
 
-    console.log(str_html)
     return str_html.replaceAll("BIND",`BIND${cname}`)
 }
