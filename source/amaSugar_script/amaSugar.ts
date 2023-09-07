@@ -9,7 +9,7 @@ const ERROR={
     "404": "NotFound"
 }
 for await (const req of server){
-    console.log(req.url)
+    console.log("Request: ", req.url)
 
 
     const str_path=req.url.split("?")[0]
@@ -26,5 +26,8 @@ for await (const req of server){
     }
 
     html=await compile(html, "")
+    console.log("compile done")
+
+    Deno.writeTextFile(`./source/compiled/${path}.as.html`, html)
     req.respond({body: html});
 }
