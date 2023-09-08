@@ -35,16 +35,15 @@ async function readComponent(str_html, target, done_targets){
     return inserted_html
 }
 
-let binded=[]
-async function addBind(str_html, target, cname){
+
+async function addBind(str_html, target, cname, done_targets){
     if (target.includes("$in_")) return str_html
 
     const target_replaced=target.split("[")[0].replace(/{|\:| |}/g, "")
     const target_replaced_array=target.replace(/{|\:| |}/g, "")
     
     let appepend_script=""
-    if (!(binded.includes(target_replaced))){
-        
+
         appepend_script=`
         <script>
             let BIND_${target_replaced}=BIND.${target_replaced}
@@ -64,7 +63,7 @@ async function addBind(str_html, target, cname){
         <script>
             BIND.${target_replaced}=BIND_${target_replaced}
         </script>`
-    }
+    
     let replaced_html=str_html.replaceAll(target, `<${cname}${target_replaced_array}>binded</${cname}${target_replaced_array}>`)
     
     return `${replaced_html}${appepend_script}`
@@ -89,7 +88,7 @@ export async function compile(str_html, cname, done_targets){
                     console.log("binding...", target)
 
                     binded.push(target_rep)
-                    str_html=await addBind(str_html, target.replaceAll("/", "___"), cname)
+                    str_html=await addBind(str_html, target.replaceAll("/", "___"), cname, done_targets)
                 }
             }
             else{
