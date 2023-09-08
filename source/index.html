@@ -1,43 +1,61 @@
 <script>
-    const cats=["=・ω・=", "🐈", "(=^x^=)", "🐈‍⬛"]
-
     let BIND={
-        cat: cats[0]
-    }
-    let int_cnt=0
-
-    function switchcat(){
-        console.log("ねこー")
-        console.log(BIND.cat)
-        int_cnt+=1
-        BIND.cat=cats[int_cnt%4]
-        document.getElementById("elm_neko").innerHTML=BIND.cat
+        params: "",
+        get: "",
+        get2: "",
+        in: ""
     }
 
-    let num_tes=0
+    const url=new URL(window.location.href)
+    BIND.params=url.searchParams
+    BIND.get=BIND.params.get("get")
+    BIND.get2=BIND.params.get("get2")
 </script>
-
 <head>
     <title>ねこー</title>
 </head>
 
-{ head }
+<body style="background-color: #fff0ff;">
+ { head }
 
-<container style="padding: 8px;">
-
-<div style="width: 166px;height: 86px;background-color: black;">
-    <div style="padding-top: 8px;"><h1 onClick="switchcat()" id="elm_neko">{:cat}</h1></div>
+<div>
+    <div>
+        <div class="container">
+            class="container"でコンテナ作成し、
+        </div>
+        <div class="container violet">
+            class="container <color>"でコンテナに色をつける
+        </div>
+    </div>
 </div>
-<p>{:cat}</p>
+<div><div class="container">コンテナカラーは7種類</div></div>
+{components/colorlist}
+<div>
+    <div class="container violet">
+        <h4>Binding</h4>
+        <p>連想配列BIND内の要素はhtml中でバインドできる</p>
+    {nekoChange}
+    {nekoChange}
+    </div>
+</div>
 
-</container>
 
-<style>
-    #elm_neko{
-        margin: auto;
-        background-color: #884411;
-        width: 150px;
-        height: 70px;
-        text-align: center;
-    }
-</style>
+<div><div class="container green">
+    <p>inputコンポーネントは元のページに値を返す</p>
+    {input :in}
+    <div>
+        <div class="container" style="width: 10em;">
+            input={:in}
+        </div>
+    </div>
+</div></div>
+<div class="container red">
+<a style="color: blue;text-decoration: underline;"
+    onClick="window.location.href=`?get=${BIND.in}&get2=888`">
+    getアクセサテストの"?get={:in}&get2=888"へのリンク</a><br>(なおgetの値は上のインプットにバインドしている)<br><br>
+Params: {:params}<br>
+Params["get"]: {:get}<br>
+Params["get2"]: {:get2}<br>
+</div>
+
+</body>
