@@ -1,7 +1,7 @@
 {
     "tasks": {
-        "amaSugar": "deno run --allow-net source/amaSugar_script/amaSugar.ts",
-        "amaS": "deno run --allow-net source/amaSugar_script/amaSugar.ts",
+        "amaSugar": "deno run --allow-net --allow-read --allow-write source/amaSugar_script/amaSugar.ts",
+        "amaS": "deno run --allow-net --allow-read --allow-write source/amaSugar_script/amaSugar.ts",
         "amaSD": "deno run --unstable --watch source/amaSugar_script/amaSugar.ts"
        }
 }
