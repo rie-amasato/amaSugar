@@ -1,4 +1,4 @@
-async function readComponent(str_html, target){
+async function readComponent(str_html, target, done_targets){
 
     const target_reps=target.replace(/{| |}/g, "").split(":")
     const target_replaced=target_reps[0]
@@ -8,6 +8,13 @@ async function readComponent(str_html, target){
     try{
         let insert=await Deno.readTextFile(path.replaceAll("___", "/"))
         
+        if ((done_targets.inserted.includes(target))){
+            insert=insert.replace(/\<script\>[\s\S]*\<\/script\>/g, "")
+        }
+        else{
+            done_targets.inserted.push(target)
+        }
+
         insert=await compile(insert, target_replaced)
 
         if (1<target_reps.length){
@@ -37,7 +44,7 @@ async function addBind(str_html, target, cname){
     
     let appepend_script=""
     if (!(binded.includes(target_replaced))){
-    
+        
         appepend_script=`
         <script>
             let BIND_${target_replaced}=BIND.${target_replaced}
@@ -64,7 +71,7 @@ async function addBind(str_html, target, cname){
 }
 
 
-export async function compile(str_html, cname){
+export async function compile(str_html, cname, done_targets){
     console.log("compiling...", cname)
     let binded=[]
 
@@ -87,7 +94,7 @@ export async function compile(str_html, cname){
             }
             else{
                 console.log("inserting component...", target)
-                str_html=await readComponent(str_html, target.replaceAll("/", "___"))
+                str_html=await readComponent(str_html, target.replaceAll("/", "___"), done_targets)
             }
         }
     }

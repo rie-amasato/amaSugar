@@ -40,7 +40,7 @@ for await (const req of server){
 
         const addcommonCSS='<head><link rel="stylesheet" href="amaSugar_script/CSS/amasugar_common.css"></head>'
         
-        html=`${addcommonCSS}${await compile(html, "", [])}`
+        html=`${addcommonCSS}${await compile(html, "", {"inserted": [], "binded": []})}`
 
         console.log("compile done")
 
