@@ -1,17 +1,75 @@
-<body style="margin: 0;">
-<h1 id="headtext">This is header</h1>
+<body>
+    <div style="position:sticky;top:0;padding-bottom: 0px;padding-top: 1px;background-color: aquamarine;">
+        <div class="headtext box-top" style="position:sticky;top:0;">
+            <div class="headtext">
+                logo: <span>あまさとう</span>
+            </div>
+        </div>
+    </div>
+
+    <div style="background-color: aquamarine;">
+        <div class="headtext box-top2">
+            <h1 style="margin: 0;padding: 0;">{:bind_h1}</h1>
+            <h3>{:bind_h3}</h3>
+        </div>
+    </div>
+    <div style="position:sticky;top:60;padding-bottom: 2;background-color: aquamarine;border-radius: 0px 0px 20px 20px;">
+        <div class="headtext box-top3"></div>
+    </div>
 </body>
 
 <script>
-    document.getElementById("headtext").innerHTML="ヘッダー"
+    let BIND={
+        bind_h1: "amaSugar -Sweet JS/TS Framework-",
+        bind_h3: "あま砂糖は覚えることを少なくすることを目指した、お菓子のようなフレームワーク",
+        menusize: "50px",
+    }
 </script>
 
 <style>
-    #headtext{
+    .headtext{
         margin: 0;
-        padding: 0;
+        padding: 0px;
         background-color: aquamarine;
-        height: 15%;
+        color:violet;
+        height: auto;
         width: 100%;
+    }
+
+    .box-top{
+        width: auto;
+        height: 20px;
+        padding:10px;
+        margin: 15px;
+        margin-bottom: -8px;
+        border: dashed 3px pink;
+        border-bottom: solid 3px aquamarine;
+    }
+    .box-top2{
+        width: auto;
+        padding:10px;
+        margin: 15px;
+        margin-top: -4px;
+        padding-top: 0px;
+        margin-bottom: 0px;
+        
+        border: dashed 3px pink;
+        border-top: none;
+        border-bottom: none;
+        border-color: pink;
+    }
+    .box-top3{
+        width: auto;
+        height: 5px;
+        padding: 10px;
+        padding-top: 0;
+        padding-bottom: 0px;
+        margin: 15px;
+        margin-top: 0px;
+        padding-top: 0px;
+        margin-bottom: 15px;
+        
+        border-bottom: dashed 3px pink;
+        border-color: pink;
     }
 </style>
