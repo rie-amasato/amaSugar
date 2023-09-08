@@ -6,7 +6,7 @@ async function readComponent(str_html, target){
     
     let inserted_html=""
     try{
-        let insert=await Deno.readTextFile(path)
+        let insert=await Deno.readTextFile(path.replaceAll("___", "/"))
         
         insert=await compile(insert, target_replaced)
 
@@ -19,7 +19,7 @@ async function readComponent(str_html, target){
             }
         }
         
-        inserted_html=(str_html.replace(target, insert))
+        inserted_html=(str_html.replace(target.replaceAll("___", "/"), insert))
         
     }catch(e){
         inserted_html=(str_html.replace(target, "Module not found"))
@@ -82,12 +82,12 @@ export async function compile(str_html, cname){
                     console.log("binding...", target)
 
                     binded.push(target_rep)
-                    str_html=await addBind(str_html, target, cname)
+                    str_html=await addBind(str_html, target.replaceAll("/", "___"), cname)
                 }
             }
             else{
                 console.log("inserting component...", target)
-                str_html=await readComponent(str_html, target)
+                str_html=await readComponent(str_html, target.replaceAll("/", "___"))
             }
         }
     }
