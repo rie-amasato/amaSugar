@@ -18,44 +18,50 @@
 <body style="background-color: #fff0ff;margin-top: 0px;">
  { head }
 
-<div>
-    <div>
-        <div class="container">
-            class="container"でコンテナ作成し、
-        </div>
-        <div class="container violet">
-            class="container <color>"でコンテナに色をつける
-        </div>
+
+<div style="display: flex;">
+    <div class="container">
+        class="container"でコンテナ作成し、
+    </div>
+    <div class="container violet">
+        class="container <span style="color: red;font-weight: bold;">color</span>"でコンテナに色をつける
     </div>
 </div>
-<div><div class="container">コンテナカラーは7種類</div></div>
-{components/colorlist}
-<div>
+
+<div style="display: flex;">
+    <div class="container">コンテナカラーは7種類</div>
+</div>
+
+<div style="display: flex;">
+    {components/colorlist}
+</div>
+
+
+<div style="display: flex;">
     <div class="container violet">
         <h4>Binding</h4>
         <p>連想配列BIND内の要素はhtml中でバインドできる</p>
     {nekoChange}
     {nekoChange}
     </div>
-</div>
 
-
-<div><div class="container green">
-    <p>inputコンポーネントは元のページに値を返す</p>
-    {input :in}
-    <div>
-        <div class="container" style="width: 10em;">
-            input={:in}
+    <div class="container green">
+        <p>inputコンポーネントは元のページに値を返す</p>
+        {input :in}
+        <div>
+            <div class="container" style="width: 10em;">
+                input={:in}
+            </div>
         </div>
     </div>
-</div></div>
-<div class="container red">
-<a style="color: blue;text-decoration: underline;"
-    onClick="window.location.href=`?get=${BIND.in}&get2=888`">
-    getアクセサテストの"?get={:in}&get2=888"へのリンク</a><br>(なおgetの値は上のインプットにバインドしている)<br><br>
-Params: {:params}<br>
-Params["get"]: {:get}<br>
-Params["get2"]: {:get2}<br>
+    <div class="container red">
+        <a style="color: blue;text-decoration: underline;"
+            onClick="window.location.href=`?get=${BIND.in}&get2=888`">
+        getアクセサテストの"?get={:in}&get2=888"へのリンク</a><br>(なおgetの値は上のインプットにバインドしている)<br><br>
+        Params: {:params}<br>
+        Params["get"]: {:get}<br>
+        Params["get2"]: {:get2}<br>
+    </div>
 </div>
 
 </body>
