@@ -1,0 +1,39 @@
+.container{
+    max-width: calc(100% - 3em);
+    word-wrap: break-word;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0.9em;
+    padding: 0.6em;
+    border: dashed 3px brown;
+    border-radius: 0.4em;
+}
+.violet{
+    background-color: #e2c6ff;
+    box-shadow: 0 0 0 0.6em #e2c6ff;
+}
+.pink{
+    background-color: #ffd1ff;
+    box-shadow: 0 0 0 0.6em #ffd1ff;
+}
+.red{
+    background-color: #ffc6c6;
+    box-shadow: 0 0 0 0.6em #ffc6c6;
+}
+.orange{
+    background-color: #ffddbc;
+    box-shadow: 0 0 0 0.6em #ffddbc;
+}
+.yellow{
+    background-color: #ffffc6;
+    box-shadow: 0 0 0 0.6em #ffffc6;
+}
+.green{
+    background-color: #c6ffc6;
+    box-shadow: 0 0 0 0.6em #c6ffc6;
+}
+.blue{
+    background-color: #c6e2ff;
+    box-shadow: 0 0 0 0.6em #c6e2ff;
+}
+    
