@@ -1,0 +1,38 @@
+<script>
+    const cats=["=・ω・=", "🐈", "(=^x^=)", "🐈‍⬛"]
+
+    let BIND={
+        cat: cats[0]
+    }
+    let int_cnt=0
+
+    function switchcat(){
+        console.log("ねこー")
+        int_cnt+=1
+        BIND.cat=cats[int_cnt%4]
+        document.getElementById("elm_neko").innerHTML=BIND.cat
+    }
+
+    let num_tes=0
+</script>
+
+
+<container style="padding: 8px;">
+
+    <div style="width: 166px;height: 86px;background-color: black;">
+        <div style="padding-top: 8px;"><h1 onClick="switchcat()" id="elm_neko">{:cat}</h1></div>
+    </div>
+    <p>{:cat}</p>
+    
+    </container>
+    
+    <style>
+        #elm_neko{
+            margin: auto;
+            background-color: #884411;
+            width: 150px;
+            height: 70px;
+            text-align: center;
+        }
+    </style>
+    
