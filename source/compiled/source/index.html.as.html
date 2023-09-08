@@ -1,0 +1,383 @@
+<head><link rel="stylesheet" href="amaSugar_script/CSS/amasugar_common.css"></head><script>
+    let BIND={
+        params: "",
+        get: "",
+        get2: "",
+        in: ""
+    }
+
+    const url=new URL(window.location.href)
+    BIND.params=url.searchParams
+    BIND.get=BIND.params.get("get")
+    BIND.get2=BIND.params.get("get2")
+</script>
+<head>
+    <title>ねこー</title>
+</head>
+
+<body style="background-color: #fff0ff;">
+ <body>
+    <div style="position:sticky;top:0;padding-bottom: 0px;padding-top: 1px;background-color: aquamarine;">
+        <div class="headtext box-top" style="position:sticky;top:0;">
+            <div class="headtext">
+                logo: <span>あまさとう</span>
+            </div>
+        </div>
+    </div>
+
+    <div style="background-color: aquamarine;">
+        <div class="headtext box-top2">
+            <h1 style="margin: 0;padding: 0;"><headbind_h1>binded</headbind_h1></h1>
+            <h3><headbind_h3>binded</headbind_h3></h3>
+        </div>
+    </div>
+    <div style="position:sticky;top:60;padding-bottom: 2;background-color: aquamarine;border-radius: 0px 0px 20px 20px;">
+        <div class="headtext box-top3"></div>
+    </div>
+</body>
+
+<script>
+    let BINDhead={
+        bind_h1: "amaSugar -Sweet JS/TS Framework-",
+        bind_h3: "あま砂糖は覚えることを少なくすることを目指した、お菓子のようなフレームワーク",
+        menusize: "50px",
+    }
+</script>
+
+<style>
+    .headtext{
+        margin: 0;
+        padding: 0px;
+        background-color: aquamarine;
+        color:violet;
+        height: auto;
+        width: 100%;
+    }
+
+    .box-top{
+        width: auto;
+        height: 20px;
+        padding:10px;
+        margin: 15px;
+        margin-bottom: -8px;
+        border: dashed 3px pink;
+        border-bottom: solid 3px aquamarine;
+    }
+    .box-top2{
+        width: auto;
+        padding:10px;
+        margin: 15px;
+        margin-top: -4px;
+        padding-top: 0px;
+        margin-bottom: 0px;
+        
+        border: dashed 3px pink;
+        border-top: none;
+        border-bottom: none;
+        border-color: pink;
+    }
+    .box-top3{
+        width: auto;
+        height: 5px;
+        padding: 10px;
+        padding-top: 0;
+        padding-bottom: 0px;
+        margin: 15px;
+        margin-top: 0px;
+        padding-top: 0px;
+        margin-bottom: 15px;
+        
+        border-bottom: dashed 3px pink;
+        border-color: pink;
+    }
+</style>
+
+        <script>
+            let BINDhead_bind_h1=BINDhead.bind_h1
+
+            Object.defineProperty(BINDhead, "bind_h1", {
+                get: ()=>BINDhead_bind_h1,
+                set: newvalue=>{
+                    BINDhead_bind_h1=newvalue
+                    console.log("CHANGED", newvalue)
+                    Array.from(document.getElementsByTagName("headbind_h1")).forEach((tag)=>{
+                        console.log(tag)
+                        tag.innerHTML=BINDhead_bind_h1
+                    })
+                }
+            })
+        </script>
+        <script>
+            BINDhead.bind_h1=BINDhead_bind_h1
+        </script>
+        <script>
+            let BINDhead_bind_h3=BINDhead.bind_h3
+
+            Object.defineProperty(BINDhead, "bind_h3", {
+                get: ()=>BINDhead_bind_h3,
+                set: newvalue=>{
+                    BINDhead_bind_h3=newvalue
+                    console.log("CHANGED", newvalue)
+                    Array.from(document.getElementsByTagName("headbind_h3")).forEach((tag)=>{
+                        console.log(tag)
+                        tag.innerHTML=BINDhead_bind_h3
+                    })
+                }
+            })
+        </script>
+        <script>
+            BINDhead.bind_h3=BINDhead_bind_h3
+        </script>
+
+<div>
+    <div>
+        <div class="container">
+            class="container"でコンテナ作成し、
+        </div>
+        <div class="container violet">
+            class="container <color>"でコンテナに色をつける
+        </div>
+    </div>
+</div>
+<div><div class="container">コンテナカラーは7種類</div></div>
+
+<span class="container violet" >
+    class="conteiner violet"
+</span>
+<span class="container red">
+    class="conteiner red"
+</span>
+<span class="container pink">
+    class="conteiner pink"
+</span>
+<span class="container orange">
+    class="conteiner orange"
+</span>
+<span class="container yellow">
+    class="conteiner yellow"
+</span>
+<span class="container green">
+    class="conteiner green"
+</span>
+<span class="container blue">
+    class="conteiner blue"
+</span>
+<div>
+    <div class="container violet">
+        <h4>Binding</h4>
+        <p>連想配列BIND内の要素はhtml中でバインドできる</p>
+    <script>
+    const cats=["=・ω・=", "🐈", "(=^x^=)", "🐈‍⬛"]
+
+    let BINDnekoChange={
+        cat: cats[0]
+    }
+    let int_cnt=0
+
+    function switchcat(){
+        console.log("ねこー")
+        int_cnt+=1
+        BINDnekoChange.cat=cats[int_cnt%4]
+        document.getElementById("elm_neko").innerHTML=BINDnekoChange.cat
+    }
+
+    let num_tes=0
+</script>
+
+
+<container style="padding: 8px;">
+
+    <div style="width: 166px;height: 86px;background-color: black;">
+        <div style="padding-top: 8px;">
+            <h1 onClick="switchcat()" id="elm_neko">
+                <nekoChangecat>binded</nekoChangecat>
+            </h1>
+        </div>
+    </div>
+    <p><nekoChangecat>binded</nekoChangecat></p>
+    
+    </container>
+    
+    <style>
+        #elm_neko{
+            margin: auto;
+            background-color: #884411;
+            width: 150px;
+            height: 70px;
+            text-align: center;
+        }
+    </style>
+    
+        <script>
+            let BINDnekoChange_cat=BINDnekoChange.cat
+
+            Object.defineProperty(BINDnekoChange, "cat", {
+                get: ()=>BINDnekoChange_cat,
+                set: newvalue=>{
+                    BINDnekoChange_cat=newvalue
+                    console.log("CHANGED", newvalue)
+                    Array.from(document.getElementsByTagName("nekoChangecat")).forEach((tag)=>{
+                        console.log(tag)
+                        tag.innerHTML=BINDnekoChange_cat
+                    })
+                }
+            })
+        </script>
+        <script>
+            BINDnekoChange.cat=BINDnekoChange_cat
+        </script>
+    <script>
+    const cats=["=・ω・=", "🐈", "(=^x^=)", "🐈‍⬛"]
+
+    let BINDnekoChange={
+        cat: cats[0]
+    }
+    let int_cnt=0
+
+    function switchcat(){
+        console.log("ねこー")
+        int_cnt+=1
+        BINDnekoChange.cat=cats[int_cnt%4]
+        document.getElementById("elm_neko").innerHTML=BINDnekoChange.cat
+    }
+
+    let num_tes=0
+</script>
+
+
+<container style="padding: 8px;">
+
+    <div style="width: 166px;height: 86px;background-color: black;">
+        <div style="padding-top: 8px;">
+            <h1 onClick="switchcat()" id="elm_neko">
+                <nekoChangecat>binded</nekoChangecat>
+            </h1>
+        </div>
+    </div>
+    <p><nekoChangecat>binded</nekoChangecat></p>
+    
+    </container>
+    
+    <style>
+        #elm_neko{
+            margin: auto;
+            background-color: #884411;
+            width: 150px;
+            height: 70px;
+            text-align: center;
+        }
+    </style>
+    
+        <script>
+            let BINDnekoChange_cat=BINDnekoChange.cat
+
+            Object.defineProperty(BINDnekoChange, "cat", {
+                get: ()=>BINDnekoChange_cat,
+                set: newvalue=>{
+                    BINDnekoChange_cat=newvalue
+                    console.log("CHANGED", newvalue)
+                    Array.from(document.getElementsByTagName("nekoChangecat")).forEach((tag)=>{
+                        console.log(tag)
+                        tag.innerHTML=BINDnekoChange_cat
+                    })
+                }
+            })
+        </script>
+        <script>
+            BINDnekoChange.cat=BINDnekoChange_cat
+        </script>
+    </div>
+</div>
+
+
+<div><div class="container green">
+    <p>inputコンポーネントは元のページに値を返す</p>
+    <input id="in_a" type="text" oninput="BIND.in=document.getElementById('in_a').value"></input>
+    <div>
+        <div class="container" style="width: 10em;">
+            input=<in>binded</in>
+        </div>
+    </div>
+</div></div>
+<div class="container red">
+<a style="color: blue;text-decoration: underline;"
+    onClick="window.location.href=`?get=${BIND.in}&get2=888`">
+    getアクセサテストの"?get=<in>binded</in>&get2=888"へのリンク</a><br>(なおgetの値は上のインプットにバインドしている)<br><br>
+Params: <params>binded</params><br>
+Params["get"]: <get>binded</get><br>
+Params["get2"]: <get2>binded</get2><br>
+</div>
+
+</body>
+        <script>
+            let BIND_in=BIND.in
+
+            Object.defineProperty(BIND, "in", {
+                get: ()=>BIND_in,
+                set: newvalue=>{
+                    BIND_in=newvalue
+                    console.log("CHANGED", newvalue)
+                    Array.from(document.getElementsByTagName("in")).forEach((tag)=>{
+                        console.log(tag)
+                        tag.innerHTML=BIND_in
+                    })
+                }
+            })
+        </script>
+        <script>
+            BIND.in=BIND_in
+        </script>
+        <script>
+            let BIND_params=BIND.params
+
+            Object.defineProperty(BIND, "params", {
+                get: ()=>BIND_params,
+                set: newvalue=>{
+                    BIND_params=newvalue
+                    console.log("CHANGED", newvalue)
+                    Array.from(document.getElementsByTagName("params")).forEach((tag)=>{
+                        console.log(tag)
+                        tag.innerHTML=BIND_params
+                    })
+                }
+            })
+        </script>
+        <script>
+            BIND.params=BIND_params
+        </script>
+        <script>
+            let BIND_get=BIND.get
+
+            Object.defineProperty(BIND, "get", {
+                get: ()=>BIND_get,
+                set: newvalue=>{
+                    BIND_get=newvalue
+                    console.log("CHANGED", newvalue)
+                    Array.from(document.getElementsByTagName("get")).forEach((tag)=>{
+                        console.log(tag)
+                        tag.innerHTML=BIND_get
+                    })
+                }
+            })
+        </script>
+        <script>
+            BIND.get=BIND_get
+        </script>
+        <script>
+            let BIND_get2=BIND.get2
+
+            Object.defineProperty(BIND, "get2", {
+                get: ()=>BIND_get2,
+                set: newvalue=>{
+                    BIND_get2=newvalue
+                    console.log("CHANGED", newvalue)
+                    Array.from(document.getElementsByTagName("get2")).forEach((tag)=>{
+                        console.log(tag)
+                        tag.innerHTML=BIND_get2
+                    })
+                }
+            })
+        </script>
+        <script>
+            BIND.get2=BIND_get2
+        </script>
