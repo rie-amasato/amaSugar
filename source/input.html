@@ -1,1 +1,8 @@
-<input id="in_a" type="text" oninput="$$in_0=document.getElementById('in_a').value"></input>
+<input id="in_a" type="text" oninput="input()"></input>
+<script>
+    function input(){
+        $$in_0=document.getElementById('in_a').value
+    }
+
+    document.getElementById('in_a').value=$$in_0
+</script>
