@@ -16,7 +16,7 @@
 </head>
 
 <body style="background-color: #fff0ff;margin-top: 0px;">
- { head }
+ { components/head }
 
 
 <div style="display: flex;">
@@ -41,14 +41,14 @@
     <div class="container violet" style="width: 50%;">
         <h4>Binding</h4>
         <p>連想配列BIND内の要素はhtml中でバインドできる</p>
-    {nekoChange}
-    {nekoChange}
+    {components/nekoChange}
+    {components/nekoChange}
     </div>
 
     <div style="display: inline;width: 50%;">
         <div class="container green" style="width: 100%;">
             <p>inputコンポーネントは元のページに値を返す</p>
-            {input :in_text}
+            {components/input :in_text}
             <div>
                 <div class="container" style="width: 10em;">
                     input={:in_text}
