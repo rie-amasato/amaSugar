@@ -1,14 +1,25 @@
 async function readComponent(str_html, target){
 
-    const target_replaced=target.replace(/{| |}/g, "")
+    const target_reps=target.replace(/{| |}/g, "").split(":")
+    const target_replaced=target_reps[0]
     const path=`source/${target_replaced}.html`
     
     let inserted_html=""
     try{
         let insert=await Deno.readTextFile(path)
         
-        const compiled_insert=await compile(insert, target_replaced)
-        inserted_html=(str_html.replace(target, compiled_insert))
+        insert=await compile(insert, target_replaced)
+
+        if (1<target_reps.length){
+            let i=0
+            for(let t of target_reps.slice(1)){
+                insert=insert.replaceAll(`$$in_${i}`,`BIND.${t.replace(":","")}` )
+                insert=insert.replaceAll(`$in_${i}`,t.replace(":","") )
+                i+=1
+            }
+        }
+        
+        inserted_html=(str_html.replace(target, insert))
         
     }catch(e){
         inserted_html=(str_html.replace(target, "Module not found"))
@@ -19,6 +30,8 @@ async function readComponent(str_html, target){
 
 let binded=[]
 async function addBind(str_html, target, cname){
+    if (target.includes("$in_")) return str_html
+
     const target_replaced=target.split("[")[0].replace(/{|\:| |}/g, "")
     const target_replaced_array=target.replace(/{|\:| |}/g, "")
     
@@ -40,6 +53,8 @@ async function addBind(str_html, target, cname){
                     })
                 }
             })
+        </script>
+        <script>
             BIND.${target_replaced}=BIND_${target_replaced}
         </script>`
     }
@@ -54,7 +69,10 @@ export async function compile(str_html, cname){
     let binded=[]
 
     if(str_html.match(/.*\{.*\}.*/)){
-        const targets=(str_html.match(/\{.*\}/g))
+        let targets=(str_html.match(/[^\$]\{.*\}/g)).map((t)=>{
+            const s_t=t.split("{")
+            return `{${s_t[1]}`
+        })
 
         for (const target of targets) {
             if (target.match(/\{ *\:.*\}/)){
@@ -74,5 +92,6 @@ export async function compile(str_html, cname){
         }
     }
 
-    return str_html.replaceAll("BIND",`BIND${cname}`)
+    str_html= str_html.replaceAll("BIND",`BIND${cname}`)
+    return str_html
 }
