@@ -3,7 +3,7 @@
         params: "",
         get: "",
         get2: "",
-        in: ""
+        in_text: "あま砂糖"
     }
 
     const url=new URL(window.location.href)
@@ -12,7 +12,7 @@
     BIND.get2=BIND.params.get("get2")
 </script>
 <head>
-    <title>ねこー</title>
+    <title>Hello, amaSugar. </title>
 </head>
 
 <body style="background-color: #fff0ff;margin-top: 0px;">
@@ -38,29 +38,31 @@
 
 
 <div style="display: flex;">
-    <div class="container violet">
+    <div class="container violet" style="width: 50%;">
         <h4>Binding</h4>
         <p>連想配列BIND内の要素はhtml中でバインドできる</p>
     {nekoChange}
     {nekoChange}
     </div>
 
-    <div class="container green">
-        <p>inputコンポーネントは元のページに値を返す</p>
-        {input :in}
-        <div>
-            <div class="container" style="width: 10em;">
-                input={:in}
+    <div style="display: inline;width: 50%;">
+        <div class="container green" style="width: 100%;">
+            <p>inputコンポーネントは元のページに値を返す</p>
+            {input :in_text}
+            <div>
+                <div class="container" style="width: 10em;">
+                    input={:in_text}
+                </div>
             </div>
         </div>
-    </div>
-    <div class="container red">
-        <a style="color: blue;text-decoration: underline;"
-            onClick="window.location.href=`?get=${BIND.in}&get2=888`">
-        getアクセサテストの"?get={:in}&get2=888"へのリンク</a><br>(なおgetの値は上のインプットにバインドしている)<br><br>
-        Params: {:params}<br>
-        Params["get"]: {:get}<br>
-        Params["get2"]: {:get2}<br>
+        <div class="container red" style="width: 100%;">
+            <a class="link"
+                onClick="window.location.href=`?get=${BIND.in_text}&get2=222`">
+            getアクセサテストの"?get={:in_text}&get2=222"へのリンク</a><br>(なおgetの値は左のインプットにバインドしている)<br><br>
+            Params: {:params}<br>
+            Params["get"]: {:get}<br>
+            Params["get2"]: {:get2}<br>
+        </div>
     </div>
 </div>
 
