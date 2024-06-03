@@ -1,6 +1,6 @@
 {
   "name": "amasugar",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "CSSs likes Sweets.",
   "files": [
     "*.css",
@@ -20,5 +20,5 @@
   "bugs": {
     "url": "https://github.com/rie-amasato/amaSugar/issues"
   },
-  "homepage": "https://github.com/rie-amasato/amaSugar#readme"
+  "homepage": "https://amasugar.pages.dev/ils-food-cake"
 }
