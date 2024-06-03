@@ -1,0 +1,43 @@
+:root{
+    --color_header: #b77;
+    --color_bitter: #daa;
+    --color_chococream: #fee;
+}
+
+table.chocolatecake{
+    border-collapse: collapse;
+
+    & th{
+        background-color: var(--color_header);
+        padding: 0.5em ;
+        border: solid 1px var(--color_chococream);
+        border-top: none;
+    }
+
+    & td{
+        padding: 0.5em;
+    }
+
+    & tbody tr:nth-child(2n){
+        background-color: var(--color_bitter);
+        & td{
+            border: solid 1px var(--color_cream);
+        }
+    }
+    & tbody tr:nth-child(2n+1){
+        background-color: var(--color_chococream);
+        & td{
+        border: solid 1px var(--color_bitter);
+        }
+    }
+}
+
+table.chocolateplate thead::before{
+    content: "🍫";
+
+    /* background-image: url('cream.svg'); */
+    background-size: cover;
+
+    /* background-color: red; */
+
+}

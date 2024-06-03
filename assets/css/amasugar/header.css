@@ -1,0 +1,9 @@
+.header{
+    background-color: darkmagenta;
+    color: white;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 101vw;
+    overflow: hidden;
+}

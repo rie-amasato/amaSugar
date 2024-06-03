@@ -1,0 +1,44 @@
+:root{
+    --color_sponge: #ffd75c;
+    --color_border: #cf970c;
+    --color_cream: #fff;
+}
+
+table.shortcake{
+    border-collapse: collapse;
+
+    & th{
+        padding-top: 0.6em;
+        background-color: var(--color_cream);
+        border-bottom: solid 1px var(--color_cream);
+        border-left: solid 1px var(--color_border);
+        border-right: solid 1px var(--color_border);
+    }
+
+    & td{
+        padding: 0.6em;
+        border: solid 1px var(--color_border);
+    }
+
+    & tbody tr:nth-child(1){
+        background-color: var(--color_sponge);
+        background-image: url('cream.svg');
+        background-size: auto 30%;
+        background-repeat: repeat-x;
+        background-position: top;
+    }
+
+    & tbody tr:nth-child(2n){
+        background-color: var(--color_cream);
+    }
+    & tbody tr:nth-child(2n+1){
+        background-color: var(--color_sponge);
+    }
+}
+
+table.strobery thead::before{
+    content: "🍓";
+    background-size: cover;
+
+    /* background-color: red; */
+}

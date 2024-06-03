@@ -1,0 +1,46 @@
+.container{
+    overflow: auto;
+    max-width: calc(100% - 3.5em);
+    word-wrap: break-word;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0.9em;
+    padding: 0.6em;
+    border: dashed 3px brown;
+    border-radius: 0.4em;
+
+    &.white{
+        background-color: var(--amasugar-white);
+        box-shadow: 0 0 0 0.6em var(--amasugar-white);
+    }
+
+    &.violet{
+        background-color: var(--amasugar-violet);
+        box-shadow: 0 0 0 0.6em var(--amasugar-violet);
+    }
+
+    &.pink{
+        background-color: var(--amasugar-pink);
+        box-shadow: 0 0 0 0.6em var(--amasugar-pink);
+    }
+    &.red{
+        background-color: var(--amasugar-red);
+        box-shadow: 0 0 0 0.6em var(--amasugar-red);
+    }
+    &.orange{
+        background-color: var(--amasugar-orange);
+        box-shadow: 0 0 0 0.6em var(--amasugar-orange);
+    }
+    &.yellow{
+        background-color: var(--amasugar-yellow);
+        box-shadow: 0 0 0 0.6em var(--amasugar-yellow);
+    }
+    &.green{
+        background-color: var(--amasugar-green);
+        box-shadow: 0 0 0 0.6em var(--amasugar-green);
+    }
+    &.blue{
+        background-color: var(--amasugar-blue);
+        box-shadow: 0 0 0 0.6em var(--amasugar-blue);
+    }
+}

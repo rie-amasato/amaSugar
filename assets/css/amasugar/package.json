@@ -1,0 +1,24 @@
+{
+  "name": "amasugar",
+  "version": "1.0.5",
+  "description": "CSSs likes Sweets.",
+  "files": [
+    "*.css",
+    "*.svg",
+    "**/*.css",
+    "**/*.svg"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rie-amasato/amaSugar.git"
+  },
+  "keywords": [
+    "CSS"
+  ],
+  "author": "rie_amasato",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rie-amasato/amaSugar/issues"
+  },
+  "homepage": "https://github.com/rie-amasato/amaSugar#readme"
+}

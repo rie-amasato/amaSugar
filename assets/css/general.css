@@ -1,0 +1,17 @@
+body{
+    margin: 0;
+    background-color: #ffe8ea;
+}
+
+pre{
+    overflow: auto;
+}
+
+.mt-4{
+    margin-top: 16px;
+}
+
+.flex-8{
+    display: flex;
+    gap: 8px;
+}

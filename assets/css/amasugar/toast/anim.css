@@ -1,0 +1,27 @@
+.toast{
+    --toast-height: 164px;
+    position: fixed;
+    right: 0;
+
+    animation: toasted 1.5s ease-out 0s 2 alternate;
+    animation-fill-mode: forwards;
+}
+
+@keyframes toasted{
+
+    0%{
+        bottom: 100vh;
+    }
+    
+    20%{
+        bottom: calc(100vh - 20px - var(--toast-height));
+    }
+
+    30%{
+        bottom: calc(100vh - var(--toast-height));
+    }
+    100%{
+        bottom: calc(100vh - var(--toast-height));
+    }
+    
+}
