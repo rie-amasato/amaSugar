@@ -1,6 +1,6 @@
 <template> 
 <div class="flex-8">
-    <Sidebar class="w-30p"/>
+    <Sidebar class="w-sidebar"/>
     <div class="w-80p">
         <div class="container violet">
             <amasugar-table-shortcake />
@@ -19,8 +19,9 @@
 </script>
 
 <style scoped>
-.w-30p{
+.w-sidebar{
     width: 30%;
+    max-width: 240px;
 }
 
 .w-80p{

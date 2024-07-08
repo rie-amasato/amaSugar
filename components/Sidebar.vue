@@ -1,5 +1,6 @@
 <script setup>
 const links=ref([
+    {text: "top", path: "/ils-food-cake"},
     {text: "containers", path: "/ils-food-cake/containers"},
     {text: "tables", path: "/ils-food-cake/tables"}
 ])
@@ -8,16 +9,12 @@ const links=ref([
 <template>
 <div class="sticky-t90 container white">
 
-<div v-for="link in links" :key="link.path">
-    <router-link :to="link.path">
-        {{link.text}}
-    </router-link>
-</div>
-    <!--<div v-for="link in links" :key="link.path">
-        <router-link>
+    <div v-for="link in links" :key="link.path">
+        <router-link :to="link.path">
             {{link.text}}
         </router-link>
-    </div>-->
+    </div>
+
 </div>
 </template>
 
