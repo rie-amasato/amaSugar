@@ -1,5 +1,5 @@
 <template>
-<div class="grid container white">
+<div class="container white">
     <div class="s1 e5">
         <nl>
             <li>
@@ -16,15 +16,18 @@
             </li>
         </nl>
     </div>
-    <div class="container green s1 e3">
-        <code>
-        class="container green s1 e3"
-        </code>
-    </div>
-    <div class="container blue s2 e5">
-        <code>
-        class="container green s2 e5"
-        </code>
+    <div class="container yellow grid">
+        <code class="s1 e5">class="container yellow grid"</code>
+        <div class="container green s1 e3">
+            <code>
+            class="container green s1 e3"
+            </code>
+        </div>
+        <div class="container blue s2 e5">
+            <code>
+            class="container green s2 e5"
+            </code>
+        </div>
     </div>
 </div>
 </template>
