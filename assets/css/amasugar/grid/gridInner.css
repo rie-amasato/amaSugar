@@ -1,0 +1,29 @@
+.grid .s1 {
+    height: fit-content;
+    grid-column-start: 1;
+}
+.grid .s2 {
+    grid-column-start: 2;
+}
+.grid .s3 {
+    grid-column-start: 3;
+}
+.grid .s4 {
+    grid-column-start: 4;
+}
+
+.grid .e2 {
+    grid-column-end: 2;
+}
+.grid .e3 {
+    grid-column-end: 3;
+}
+.grid .e4 {
+    grid-column-end: 4;
+}
+.grid .e5 {
+    grid-column-end: 5;
+}
+.grid .e6{
+    grid-column-end: 6;
+}

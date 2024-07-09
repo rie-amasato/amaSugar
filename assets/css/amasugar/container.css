@@ -1,46 +1,44 @@
 .container{
     overflow: auto;
-    max-width: calc(100% - 3.5em);
+    max-width: calc(100% - 56px);
     word-wrap: break-word;
-    display: inline-block;
-    vertical-align: top;
-    margin: 0.9em;
-    padding: 0.6em;
+    margin: 24px 16px;
+    padding: 8px;
     border: dashed 3px #f2a99e;
-    border-radius: 0.4em;
+    border-radius: 8px;
 
     &.white{
         background-color: var(--amasugar-white);
-        box-shadow: 0 0 0 0.6em var(--amasugar-white);
+        box-shadow: 0 0 0 8px var(--amasugar-white);
     }
 
     &.violet{
         background-color: var(--amasugar-violet);
-        box-shadow: 0 0 0 0.6em var(--amasugar-violet);
+        box-shadow: 0 0 0 8px var(--amasugar-violet);
     }
 
     &.pink{
         background-color: var(--amasugar-pink);
-        box-shadow: 0 0 0 0.6em var(--amasugar-pink);
+        box-shadow: 0 0 0 8px var(--amasugar-pink);
     }
     &.red{
         background-color: var(--amasugar-red);
-        box-shadow: 0 0 0 0.6em var(--amasugar-red);
+        box-shadow: 0 0 0 8px var(--amasugar-red);
     }
     &.orange{
         background-color: var(--amasugar-orange);
-        box-shadow: 0 0 0 0.6em var(--amasugar-orange);
+        box-shadow: 0 0 0 8px var(--amasugar-orange);
     }
     &.yellow{
         background-color: var(--amasugar-yellow);
-        box-shadow: 0 0 0 0.6em var(--amasugar-yellow);
+        box-shadow: 0 0 0 8px var(--amasugar-yellow);
     }
     &.green{
         background-color: var(--amasugar-green);
-        box-shadow: 0 0 0 0.6em var(--amasugar-green);
+        box-shadow: 0 0 0 8px var(--amasugar-green);
     }
     &.blue{
         background-color: var(--amasugar-blue);
-        box-shadow: 0 0 0 0.6em var(--amasugar-blue);
+        box-shadow: 0 0 0 8px var(--amasugar-blue);
     }
 }

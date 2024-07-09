@@ -15,3 +15,7 @@
 
 /* トースト用CSS */
 @import url("./toast/anim.css");
+
+/* グリッド用CSS */
+@import url("./grid/gridOuter.css");
+@import url("./grid/gridInner.css");
