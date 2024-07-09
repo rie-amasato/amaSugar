@@ -1,16 +1,11 @@
 <template> 
-<div class="flex-8">
-    <Sidebar class="w-sidebar"/>
-    <div class="w-80p">
-        <div class="container violet">
-            <amasugar-table-shortcake />
-        </div>
-
-        <div class="container violet">
-            <amasugar-table-chocolate />
-        </div>
+    <div class="container violet">
+        <amasugar-table-shortcake />
     </div>
-</div>
+
+    <div class="container violet">
+        <amasugar-table-chocolate />
+    </div>
 </template>
 
 <script setup>

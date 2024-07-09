@@ -1,12 +1,5 @@
 <template> 
-<div class="flex-8">
-    <Sidebar class="w-sidebar"/>
-    <div class="w-80p">
-        <div class="mt-4">
-            <amasugar-containers />
-        </div>
-    </div>
-</div>
+    <amasugar-containers />    
 </template>
 
 <script setup>
