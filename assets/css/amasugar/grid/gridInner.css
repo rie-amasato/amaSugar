@@ -1,5 +1,4 @@
 .grid .s1 {
-    height: fit-content;
     grid-column-start: 1;
 }
 .grid .s2 {

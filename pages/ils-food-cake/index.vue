@@ -1,10 +1,10 @@
 <template> 
         <div class="container pink">
             <h2>AmaSugarとは</h2>
-            <nl>
+            <ul>
               <li>お菓子、お砂糖のような甘いパステルめを目指したCSS集です</li>
               <li>CSSのみを使用しているのでフレームワークを問いません</li>
-            </nl> 
+            </ul> 
         </div>
         <div class="container orange">
             <h2>使い方 for Nuxt3</h2>

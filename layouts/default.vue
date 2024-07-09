@@ -11,7 +11,7 @@
     </div>
 </template>
 
-<style>
+<style scoped>
 .allbody{
     width: 90%;
     max-width: 800px;
@@ -30,15 +30,11 @@
 .sidebar{
     position: sticky;
     top: 120px;
-    height: 100%;
+    height: fit-content;
 }
 
 .mainpage{
     width: 90%;
     margin-left: 5%;
-}
-
-.w-100vw{
-    width: 100vw;
 }
 </style>
