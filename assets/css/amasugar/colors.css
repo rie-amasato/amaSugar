@@ -1,10 +1,26 @@
 :root{
+    --amasugar-white-light: #fefefe;
     --amasugar-white: #fafafa;
+    --amasugar-white-dark: #dadada;
+    --amasugar-violet-light: #ffe6ff;
     --amasugar-violet: #e2c6ff;
+    --amasugar-violet-dark: #c2a6df;
+    --amasugar-pink-light: #fff1ff;
     --amasugar-pink: #ffd1ff;
+    --amasugar-pink-dark: #dfb1df;
+    --amasugar-red-light: #ffe6e6;
     --amasugar-red: #ffc6c6;
+    --amasugar-red-dark: #dfa6a6;
+    --amasugar-orange-light: #fffddc;
     --amasugar-orange: #ffddbc;
+    --amasugar-orange-dark: #dfbd9c;
+    --amasugar-yellow-light: #ffffe6;
     --amasugar-yellow: #ffffc6;
+    --amasugar-yellow-dark: #dfdfa6;
+    --amasugar-green-light: #e6ffe6;
     --amasugar-green: #c6ffc6;
+    --amasugar-green-dark: #a6dfa6;
+    --amasugar-blue-light: #e6ffff;
     --amasugar-blue: #c6e2ff;
+    --amasugar-blue-dark: #a6c2df;
 }

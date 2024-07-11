@@ -1,9 +1,10 @@
 <script setup>
 const links=ref([
-    {text: "top", path: "/ils-food-cake"},
-    {text: "gridlayout", path: "/ils-food-cake/gridlayout"},
-    {text: "containers", path: "/ils-food-cake/containers"},
-    {text: "tables", path: "/ils-food-cake/tables"}
+    {text: "トップ", path: "/ils-food-cake"},
+    {text: "グリッドレイアウト", path: "/ils-food-cake/gridlayout"},
+    {text: "カラー", path: "/ils-food-cake/colors"},
+    {text: "コンテナ", path: "/ils-food-cake/containers"},
+    {text: "テーブル", path: "/ils-food-cake/tables"}
 ])
 
 const colors=ref(["violet", "red", "pink", "orange", "yellow", "green", "blue"])
