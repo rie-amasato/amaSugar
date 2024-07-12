@@ -11,8 +11,15 @@
         background-color: var(--amasugar-white);
         box-shadow: 0 0 0 8px var(--amasugar-white);
 
+        &::-webkit-scrollbar{
+            width: 8px;
+        }
+        &::-webkit-scrollbar-track{
+            background-color: var(--amasugar-white);
+        }
         &::-webkit-scrollbar-thumb{
             background-color: var(--amasugar-white-dark);
+            border-radius: 4px;
         }
     }   
 
@@ -20,35 +27,96 @@
         background-color: var(--amasugar-violet);
         box-shadow: 0 0 0 8px var(--amasugar-violet);
 
+        &::-webkit-scrollbar{
+            width: 8px;
+        }
+        &::-webkit-scrollbar-track{
+            background-color: var(--amasugar-violete);
+        }
         &::-webkit-scrollbar-thumb{
-            background-color: var(--amasugar-white-dark);
+            background-color: var(--amasugar-violet-dark);
+            border-radius: 4px;
         }
     }
 
     &.pink{
         background-color: var(--amasugar-pink);
         box-shadow: 0 0 0 8px var(--amasugar-pink);
+
+        &::-webkit-scrollbar{
+            width: 8px;
+        }
+        &::-webkit-scrollbar-track{
+            background-color: var(--amasugar-pink);
+        }
+        &::-webkit-scrollbar-thumb{
+            background-color: var(--amasugar-pink-dark);
+            border-radius: 4px;
+        }
     }
     &.red{
         background-color: var(--amasugar-red);
         box-shadow: 0 0 0 8px var(--amasugar-red);
+
+        &::-webkit-scrollbar{
+            width: 8px;
+        }
+        &::-webkit-scrollbar-track{
+            background-color: var(--amasugar-red);
+        }
+        &::-webkit-scrollbar-thumb{
+            background-color: var(--amasugar-red-dark);
+            border-radius: 4px;
+        }
     }
     &.orange{
         background-color: var(--amasugar-orange);
         box-shadow: 0 0 0 8px var(--amasugar-orange);
+
+        &::-webkit-scrollbar{
+            width: 8px;
+        }
+        &::-webkit-scrollbar-track{
+            background-color: var(--amasugar-orange);
+        }
+        &::-webkit-scrollbar-thumb{
+            background-color: var(--amasugar-orange-dark);
+            border-radius: 4px;
+        }
     }
     &.yellow{
         background-color: var(--amasugar-yellow);
         box-shadow: 0 0 0 8px var(--amasugar-yellow);
+
+        &::-webkit-scrollbar{
+            width: 8px;
+        }
+        &::-webkit-scrollbar-track{
+            background-color: var(--amasugar-yellow);
+        }
+        &::-webkit-scrollbar-thumb{
+            background-color: var(--amasugar-yellow-dark);
+            border-radius: 4px;
+        }
     }
     &.green{
         background-color: var(--amasugar-green);
         box-shadow: 0 0 0 8px var(--amasugar-green);
+
+        &::-webkit-scrollbar{
+            width: 8px;
+        }
+        &::-webkit-scrollbar-track{
+            background-color: var(--amasugar-green);
+        }
+        &::-webkit-scrollbar-thumb{
+            background-color: var(--amasugar-green-dark);
+            border-radius: 4px;
+        }
     }
     &.blue{
         background-color: var(--amasugar-blue);
         box-shadow: 0 0 0 8px var(--amasugar-blue);
-
 
         &::-webkit-scrollbar{
             width: 8px;
@@ -58,6 +126,7 @@
         }
         &::-webkit-scrollbar-thumb{
             background-color: var(--amasugar-blue-dark);
+            border-radius: 4px;
         }
     }
 }
