@@ -49,6 +49,13 @@
         background-color: var(--amasugar-blue);
         box-shadow: 0 0 0 8px var(--amasugar-blue);
 
+
+        &::-webkit-scrollbar{
+            width: 8px;
+        }
+        &::-webkit-scrollbar-track{
+            background-color: var(--amasugar-blue);
+        }
         &::-webkit-scrollbar-thumb{
             background-color: var(--amasugar-blue-dark);
         }
