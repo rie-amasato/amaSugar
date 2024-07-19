@@ -1,5 +1,5 @@
 .toast{
-    --toast-height: 164px;
+    z-index: calc(infinity);
     position: fixed;
     right: 0;
 
@@ -10,18 +10,20 @@
 @keyframes toasted{
 
     0%{
-        bottom: 100vh;
+        top: -100%;
     }
     
     20%{
-        bottom: calc(100vh - 20px - var(--toast-height));
+        top: 48px;
     }
 
     30%{
-        bottom: calc(100vh - var(--toast-height));
+        top: 24px;
+        /* bottom: calc(100vh - 100%); */
     }
     100%{
-        bottom: calc(100vh - var(--toast-height));
+        top: 24px;
+        /* bottom: calc(100vh - 100%); */
     }
     
 }

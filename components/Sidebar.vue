@@ -4,7 +4,8 @@ const links=ref([
     {text: "グリッドレイアウト", path: "/ils-food-cake/gridlayout"},
     {text: "カラー", path: "/ils-food-cake/colors"},
     {text: "コンテナ", path: "/ils-food-cake/containers"},
-    {text: "テーブル", path: "/ils-food-cake/tables"}
+    {text: "テーブル", path: "/ils-food-cake/tables"},
+    {text: "トースト", path: "/ils-food-cake/toast"},
 ])
 
 const colors=ref(["violet", "red", "pink", "orange", "yellow", "green", "blue"])
