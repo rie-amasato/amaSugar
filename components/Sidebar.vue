@@ -27,7 +27,13 @@ const colors=ref(["violet", "red", "pink", "orange", "yellow", "green", "blue"])
 .sticky-t90{
     position: sticky;
     top: 90px;
-    height: calc(100dvh - 150px);
+    min-height: calc(100dvh - 150px);
+    height: fit-content;
+}
+
+.container{
+    margin-top: 8px;
+    margin-bottom: 16px;
 }
 
 .ma-auto{

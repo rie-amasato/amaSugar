@@ -4,7 +4,10 @@
             <div class="header container red w-100">AmaSugar-あま砂糖</div>
         </div>
 
-        <Sidebar class="sidebar s1 e2"/>
+        <div class="sidebar s1 e2">
+            <Sidebar />
+        </div>
+
         <div class="s2 e5">
             <NuxtPage />
         </div>
@@ -29,6 +32,7 @@
 }
 
 .sidebar{
+    height: fit-content;
     position: sticky;
     top: 120px;
     height: fit-content;
