@@ -14,6 +14,9 @@
             <li>
                 終了番号も同じように、<code>class="e5"</code>のように<code>e${number}</code>の形で指定します
             </li>
+            <li>
+                つまるところ、縦分割のみ対応させた糖衣構文です
+            </li>
         </nl>
     </div>
     <div class="container yellow grid">

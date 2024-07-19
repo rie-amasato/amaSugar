@@ -4,6 +4,7 @@
             <ul>
               <li>お菓子、お砂糖のような甘いパステルめを目指したCSS集です</li>
               <li>CSSのみを使用しているのでフレームワークを問いません</li>
+              <li>言うなれば、ちょっと"あま"めの、"糖"衣構文(Syntax Sugar)</li>
             </ul> 
         </div>
         <div class="container orange">
@@ -19,7 +20,7 @@
                 <div class="container violet"><code>css: ["amasugar/amasugar.css"]</code></div>
               </li>
             </ol> 
-</div>
+        </div>
 </template>
 
 <script setup>
