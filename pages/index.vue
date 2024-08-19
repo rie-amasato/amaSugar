@@ -1,5 +1,4 @@
 <template>
-  <CIndex />
 </template>
 
 <script setup>
