@@ -6,6 +6,7 @@ const links=ref([
     {text: "コンテナ", path: "/ils-food-cake/containers"},
     {text: "テーブル", path: "/ils-food-cake/tables"},
     {text: "トースト", path: "/ils-food-cake/toast"},
+    {text: "その他作ったもの", path: "/ils-food-cake/products"},
 ])
 
 const colors=ref(["violet", "red", "pink", "orange", "yellow", "green", "blue"])
