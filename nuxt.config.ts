@@ -3,5 +3,8 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   ssr:  true,
   target: "static",
-  css: ["@/assets/css/general.css", "@/assets/css/amasugar/amasugar.css"]
+  css: ["@/assets/css/general.css", "@/assets/css/amasugar/amasugar.css"],
+  app: {
+    buildAssetsDir: '/sugar/'
+  }
 })
