@@ -13,9 +13,16 @@
 @import url("./table/shortcake/css.css");
 @import url("./table/chocolate/css.css");
 
-/* トースト用CSS */
-@import url("./toast/anim.css");
 
 /* グリッド用CSS */
 @import url("./grid/gridOuter.css");
 @import url("./grid/gridInner.css");
+
+/* アニメーション用CSS */
+/* 回転用CSS */
+@import url("./anim/rotate.css");
+/* ローディングでのびるCSS */
+@import url("./anim/dondurma.css");
+
+/* トースト用CSS */
+@import url("./toast/anim.css");

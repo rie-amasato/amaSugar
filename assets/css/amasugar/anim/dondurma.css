@@ -1,0 +1,52 @@
+@keyframes anim-dondurma{
+    0%{
+        margin: 0 0 0 0;
+        transform: rotateX(30deg);
+        height: 64px;
+
+        border-radius: 50% 50% 40% 40%;
+    }
+    100%{
+        margin: 64px 0 0 0;
+
+        border-radius: 40% 40% 30% 30%;
+
+        transform: scaleX(1);
+    }
+}
+
+.dondurma{
+    border-radius: 50%;
+
+    height: 0px;
+    width: 0px;
+
+    animation: anim-dondurma 0.5s infinite alternate ease;
+
+    &&.white{
+        border: solid 16px var(--amasugar-white);
+    }
+    &&.violet{
+        border: solid 16px var(--amasugar-violet);
+    }
+    &&.pink{
+        border: solid 16px var(--amasugar-pink);
+    }
+    &&.red{
+        border: solid 16px var(--amasugar-red);
+    }
+    &&.orange{
+        border: solid 16px var(--amasugar-orange);
+    }
+    &&.yellow{
+        border: solid 16px var(--amasugar-yellow);
+    }
+    &&.green{
+        border: solid 16px var(--amasugar-green);
+    }
+    &&.blue{
+        border: solid 16px var(--amasugar-blue);
+    }
+    
+}
+
