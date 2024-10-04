@@ -5,6 +5,7 @@ const links=ref([
     {text: "カラー", path: "/ils-food-cake/colors"},
     {text: "コンテナ", path: "/ils-food-cake/containers"},
     {text: "テーブル", path: "/ils-food-cake/tables"},
+    {text: "アニメーション", path: "/ils-food-cake/animation"},
     {text: "トースト", path: "/ils-food-cake/toast"},
     {text: "その他作ったもの", path: "/ils-food-cake/products"},
 ])
@@ -14,14 +15,18 @@ const colors=ref(["violet", "red", "pink", "orange", "yellow", "green", "blue"])
 
 <template>
 <div class="container white grid">
-    <div v-for="link, i in links"
-     :key="link.path"
-     class="s1 e5 container" 
-     :class="colors[i%7]">
-            <router-link :to="link.path">
+    <router-link 
+        v-for="link, i in links"
+        :key="link.path" 
+        :to="link.path"
+        class="s1 e5"
+    >
+        <div
+        class="s1 e5 container" 
+        :class="colors[i%7]">
                 {{link.text}}
-            </router-link>
-    </div>
+        </div>
+    </router-link>
 </div>
 </template>
 
