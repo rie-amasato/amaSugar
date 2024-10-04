@@ -1,9 +1,11 @@
 <template> 
     <div class="container violet">
+        <h2>ショートケーキ表</h2>
         <amasugar-table-shortcake />
     </div>
 
     <div class="container violet">
+        <h2>チョコレートケーキ表</h2>
         <amasugar-table-chocolate />
     </div>
 </template>

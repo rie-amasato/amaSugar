@@ -1,5 +1,6 @@
 <template> 
     <div class="container pink">
+        <h2>CSS定義されたカラー</h2>
         <code>--amasugar-${color}</code>という形で、CSSの変数としてパステルカラー8色とそれぞれに対して明るいlightカラーと暗いdarkカラーを定義しています。
     </div>
     <div v-for="color in colors" :key="color"

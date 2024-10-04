@@ -1,5 +1,6 @@
 <template> 
     <div class="container pink">
+        <h2>そのほかのものいろいろ</h2>
         ここは筆者が作ったその他のものを紹介するページです。
         <div class="container violet">
             <h2>fAkePedia-ウソ辞書-</h2>

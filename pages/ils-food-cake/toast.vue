@@ -1,5 +1,6 @@
 <template> 
     <div class="container violet">
+        <h2>トースト用アニメーション</h2>
         <amasugar-toast />
     </div>
 </template>

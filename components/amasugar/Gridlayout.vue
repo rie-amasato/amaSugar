@@ -1,6 +1,7 @@
 <template>
 <div class="container white">
     <div class="s1 e5">
+        <h2>グリッドレイアウト</h2>
         <nl>
             <li>
                 <code>clas="grid"</code>を使用することでその要素が縦に4分割されます。

@@ -1,4 +1,5 @@
-<template> 
+<template>  
+    <h2>要素を入れるコンテナ</h2>
     <amasugar-containers />    
 </template>
 

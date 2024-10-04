@@ -1,6 +1,4 @@
 <template>
-        <div>ショートケーキ（表）</div>
-    
         <table class="strobery shortcake">
             <thead>
                 <tr><th>head1</th><th width="140">head2</th></tr>

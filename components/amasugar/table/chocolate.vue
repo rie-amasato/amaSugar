@@ -1,6 +1,4 @@
-<template>
-        <div>チョコレートケーキ（表）</div>
-    
+<template>    
         <table class="chocolateplate chocolatecake">
             <thead>
                 <tr><th>head1</th><th>head2</th></tr>
