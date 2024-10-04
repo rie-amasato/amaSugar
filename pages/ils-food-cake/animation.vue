@@ -53,5 +53,6 @@
 </style>
 
 <script setup>
+useHead({title: "あま砂糖 | アニメーション"})
 const colors=ref(["white", "violet", "pink", "red", "orange", "yellow", "green", "blue"])
 </script>

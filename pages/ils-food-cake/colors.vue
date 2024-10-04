@@ -48,7 +48,7 @@
 </template>
 
 <script setup>
-    useHead({title: "あま砂糖"})
+    useHead({title: "あま砂糖 | カラー"})
     const colors=ref([
         "white",// "white-sub",
         "violet",// "violet-sub", 

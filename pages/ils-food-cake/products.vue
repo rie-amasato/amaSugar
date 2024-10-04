@@ -17,7 +17,7 @@
 </template>
 
 <script setup>
-    useHead({title: "あま砂糖"})
+    useHead({title: "あま砂糖 | そのほか宣伝"})
 
 </script>
 
