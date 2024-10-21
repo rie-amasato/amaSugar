@@ -13,6 +13,8 @@
 @import url("./table/shortcake/css.css");
 @import url("./table/chocolate/css.css");
 
+/* 入力項目用CSS */
+@import url("./input.css");
 
 /* グリッド用CSS */
 @import url("./grid/gridOuter.css");

@@ -1,0 +1,19 @@
+input.plate{
+    --text: brown;
+    --background: floralwhite;
+
+    &.bitter{
+        --text: floralwhite;
+        --background: brown;
+    } 
+    padding: 8px;
+    margin: 8px;
+    border-radius: 40vw 30vw 70vw 60vw;
+
+    box-shadow: 0 0 0 8px var(--background);
+    background-color: var(--background);
+    border: solid 3px var(--text);
+    color: var(--text);
+
+
+}

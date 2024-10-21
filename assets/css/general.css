@@ -8,6 +8,10 @@ pre{
     overflow: auto;
 }
 
+.pd-4{
+    padding: 16px;
+}
+
 .mt-4{
     margin-top: 16px;
 }
