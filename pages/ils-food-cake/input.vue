@@ -9,6 +9,9 @@
                 class="plate bitter"
                 value="biterチョコのプレートも"
             >
+
+            ポッキーのトグルボタンs
+            <input type="checkbox" class="pocky" />
         </div>
     </div>
 </template>

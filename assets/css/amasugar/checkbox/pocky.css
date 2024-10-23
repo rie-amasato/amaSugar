@@ -1,0 +1,20 @@
+input[type=checkbox].pocky{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+input[type=checkbox].pocky{
+    content: "";  
+    border-right: solid 16px burlywood;
+    border-left: solid 32px burlywood;
+    border-radius: 50vh;
+}
+
+input[type=checkbox].pocky:checked{
+    content: "";  
+    border-right: solid 16px burlywood;
+    border-left: solid 32px brown;
+    border-radius: 50vh;
+;
+}

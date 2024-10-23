@@ -14,7 +14,10 @@
 @import url("./table/chocolate/css.css");
 
 /* 入力項目用CSS */
+/* 文字入力インプット */
 @import url("./input.css");
+/* トグルボタン（チェックボックス） */
+@import url("./checkbox/pocky.css");
 
 /* グリッド用CSS */
 @import url("./grid/gridOuter.css");
